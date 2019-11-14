@@ -7,11 +7,11 @@ go:
   - "1.12.x"
   - master
 
-before_install:
-  - eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=master bash)"
+# Force-enable Go modules. Also force go to use the code in vendor/
+# These will both be unnecessary when Go 1.14 lands.
+env: GO111MODULE=on GOFLAGS='-mod vendor'
 
-install:
-  - go build
+install: true
 
 matrix:
   # It's ok if our code fails on unstable development versions of Go.
