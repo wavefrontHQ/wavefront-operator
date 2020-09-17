@@ -54,8 +54,14 @@ helm install --name wavefront wavefront/wavefront-operator --set wavefront.url=h
 
 ## Uninstallation
 To uninstall/delete a release named "wavefront":
+helm2:
 ```
 helm delete wavefront --purge
+```
+
+helm3:
+```
+helm delete wavefront
 ```
 
 CRDs and namespaces created by this release are not removed as part of helm delete.
