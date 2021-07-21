@@ -1,4 +1,6 @@
 packageName: wavefront-operator
 channels:
   - name: alpha
-    currentCSV: wavefront-operator.v0.1.0
+    currentCSV: wavefront-operator.v0.2.0
+defaultChannel: ''
+packageName: wavefront-operator
